@@ -64,7 +64,8 @@ public class DynamoDBSerDe extends AbstractSerDe {
   private List<String> columnNames;
 
   @Override
-  public void initialize(Configuration conf, Properties tbl) throws SerDeException {
+  public void initialize(Configuration conf, Properties tbl, Properties partition)
+          throws SerDeException {
     serdeParams = ShimsLoader.getHiveShims().getSerDeParametersShim(conf, tbl,
         getClass().getName());
     columnNames = serdeParams.getColumnNames();

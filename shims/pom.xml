@@ -19,6 +19,7 @@
         <module>common</module>
         <module>hive2-shims</module>
         <module>hive3-shims</module>
+        <module>hive4-shims</module>
         <module>loader</module>
     </modules>
 

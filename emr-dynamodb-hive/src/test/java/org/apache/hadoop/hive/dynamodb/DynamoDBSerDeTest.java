@@ -321,7 +321,7 @@ public class DynamoDBSerDeTest {
     props.setProperty(DynamoDBConstants.DYNAMODB_NULL_SERIALIZATION, Boolean.toString(nullSerialization));
 
     DynamoDBSerDe serde = new DynamoDBSerDe();
-    serde.initialize(null, props);
+    serde.initialize(null, props, null);
 
     StructObjectInspector rowOI = ObjectInspectorFactory.getStandardStructObjectInspector(attributeNames, colOIs);
     DynamoDBItemWritable item = (DynamoDBItemWritable) serde.serialize(rowData, rowOI);
